@@ -17,7 +17,7 @@ if (!isset($_SESSION['admin'])) {
 <h1>Welcome Admin </h1>
 <p>You have successfully logged in.</p>
 
-<a href="logout.php">Logout</a>
+<a href="./backend/logout.php">Logout</a>
 
 </body>
 </html>
