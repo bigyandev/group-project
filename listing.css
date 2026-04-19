@@ -1,0 +1,13 @@
+table {
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background: #5f9cff;
+    color: white;
+}
+
+td, th {
+    text-align: center;
+}
