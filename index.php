@@ -19,6 +19,7 @@
       <?php
        echo("<h1>Welcome To Bookloop</h1>");
       ?>
+      <h3>A book that loops indefinetly towards your brain</h3>
       <a href="login.php">login</a>
     </body>
 </html>
