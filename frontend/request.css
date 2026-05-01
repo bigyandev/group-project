@@ -1,0 +1,104 @@
+/* ============================================================
+   request.css
+   ============================================================ */
+
+.request-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 40px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* left form */
+.request-form-box {
+  background: #ffffff;
+  border: 1px solid #e0d8c8;
+  border-radius: 14px;
+  padding: 38px;
+}
+
+.request-form-box h2 {
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.request-form-box .sub {
+  font-size: 0.84rem;
+  color: #7a6e60;
+  margin-bottom: 28px;
+}
+
+/* right sidebar */
+.request-sidebar h2 {
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.request-card {
+  background: #ffffff;
+  border: 1px solid #e0d8c8;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.request-card h4 {
+  font-family: Georgia, serif;
+  font-size: 0.92rem;
+  margin-bottom: 3px;
+}
+
+.request-card .req-author {
+  font-size: 0.78rem;
+  color: #7a6e60;
+  margin-bottom: 10px;
+}
+
+.req-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.req-votes {
+  font-size: 0.76rem;
+  color: #7a6e60;
+}
+
+.tips-box {
+  background: #f0ece4;
+  border: 1px solid #e0d8c8;
+  border-radius: 10px;
+  padding: 22px;
+  margin-top: 20px;
+}
+
+.tips-box h3 {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.tips-box ul {
+  padding-left: 18px;
+}
+
+.tips-box ul li {
+  font-size: 0.84rem;
+  color: #7a6e60;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.tips-box ul li a {
+  color: #c8873a;
+}
+
+.tips-box ul li a:hover {
+  text-decoration: underline;
+}

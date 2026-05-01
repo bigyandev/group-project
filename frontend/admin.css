@@ -1,0 +1,226 @@
+/* ============================================================
+   admin.css
+   ============================================================ */
+
+body {
+  background: #f0ece4;
+}
+
+/* layout: fixed sidebar + main content */
+.admin-sidebar {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 64px);
+  background: #1a1208;
+  padding: 28px 0;
+  overflow-y: auto;
+  border-right: 1px solid rgba(200, 135, 58, 0.15);
+}
+
+.sidebar-label {
+  font-size: 0.66rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #4a4035;
+  padding: 0 18px;
+  margin: 22px 0 8px;
+  display: block;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 10px 18px;
+  color: #9a8070;
+  font-size: 0.86rem;
+  font-weight: bold;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link:hover {
+  color: #ffffff;
+  background: rgba(200, 135, 58, 0.10);
+}
+
+.sidebar-link.active {
+  color: #c8873a;
+  border-left-color: #c8873a;
+  background: rgba(200, 135, 58, 0.08);
+}
+
+.sidebar-link.logout {
+  color: #a03520;
+}
+
+/* main area */
+.admin-main {
+  margin-left: 220px;
+  padding: 40px;
+}
+
+.admin-header {
+  margin-bottom: 32px;
+}
+
+.admin-header h1 {
+  font-family: Georgia, serif;
+  font-size: 1.7rem;
+  margin-bottom: 4px;
+}
+
+.admin-header p {
+  color: #7a6e60;
+  font-size: 0.88rem;
+}
+
+/* stat cards */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e0d8c8;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.stat-card .s-label {
+  font-size: 0.74rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #7a6e60;
+  margin-bottom: 10px;
+}
+
+.stat-card .s-num {
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1a1208;
+}
+
+.stat-card .s-change {
+  font-size: 0.76rem;
+  margin-top: 6px;
+}
+
+.s-up   { color: #1a6630; }
+.s-down { color: #a03520; }
+
+/* panels */
+.panel {
+  background: #ffffff;
+  border: 1px solid #e0d8c8;
+  border-radius: 12px;
+  padding: 26px;
+  margin-bottom: 26px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.panel-header h2 {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+}
+
+.panel-header a {
+  font-size: 0.82rem;
+  color: #c8873a;
+}
+
+.panel-header a:hover { text-decoration: underline; }
+
+/* table */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th {
+  font-size: 0.70rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #7a6e60;
+  padding: 9px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0d8c8;
+}
+
+.admin-table td {
+  padding: 12px 12px;
+  font-size: 0.86rem;
+  border-bottom: 1px solid #f0ece4;
+  vertical-align: middle;
+}
+
+.admin-table tr:last-child td { border-bottom: none; }
+
+.admin-table tr:hover td { background: #faf8f4; }
+
+/* action buttons in table */
+.tbl-btn {
+  padding: 5px 12px;
+  border-radius: 5px;
+  border: 1px solid #e0d8c8;
+  background: transparent;
+  font-family: Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #1a1208;
+}
+
+.tbl-btn:hover {
+  border-color: #c8873a;
+  color: #c8873a;
+}
+
+/* two-column grid */
+.two-col {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 26px;
+}
+
+/* activity feed */
+.activity-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 11px 0;
+  border-bottom: 1px solid #f0ece4;
+}
+
+.activity-item:last-child { border-bottom: none; }
+
+.act-dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.dot-borrow { background: #fde8d8; }
+.dot-return { background: #d4edda; }
+.dot-request { background: #e8e0f0; }
+
+.act-name  { font-weight: bold; font-size: 0.86rem; }
+.act-desc  { color: #7a6e60; font-size: 0.80rem; margin-top: 2px; }
+.act-time  { color: #b0a898; font-size: 0.74rem; margin-top: 2px; }

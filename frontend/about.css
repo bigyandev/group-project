@@ -1,0 +1,132 @@
+/* ============================================================
+   about.css
+   ============================================================ */
+
+.mission-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.mission-text h2 {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.mission-text p {
+  color: #7a6e60;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.mission-quote {
+  background: #f0ece4;
+  border: 1px solid #e0d8c8;
+  border-left: 4px solid #c8873a;
+  border-radius: 12px;
+  padding: 36px;
+}
+
+.mission-quote p {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #1a1208;
+  line-height: 1.6;
+}
+
+/* values */
+.values-section {
+  background: #f0ece4;
+  padding: 70px 40px;
+}
+
+.values-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.value-card {
+  background: #faf8f4;
+  border: 1px solid #e0d8c8;
+  border-top: 4px solid #c8873a;
+  border-radius: 10px;
+  padding: 26px 20px;
+}
+
+.value-card h3 {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.value-card p {
+  font-size: 0.85rem;
+  color: #7a6e60;
+  line-height: 1.6;
+}
+
+/* team */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.team-card {
+  background: #ffffff;
+  border: 1px solid #e0d8c8;
+  border-radius: 12px;
+  padding: 30px 22px;
+  text-align: center;
+}
+
+.team-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #c8873a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  margin: 0 auto 14px;
+}
+
+.av-amber { background: #fde8c8; }
+.av-green { background: #d4edd4; }
+.av-red   { background: #fde8d8; }
+
+.team-card h3 {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.team-card .role {
+  font-size: 0.74rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #c8873a;
+  margin-bottom: 10px;
+}
+
+.team-card p {
+  font-size: 0.84rem;
+  color: #7a6e60;
+  line-height: 1.55;
+}
