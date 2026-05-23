@@ -1,0 +1,26 @@
+/* ============================================================
+   notifications.css — Notifications page
+   ============================================================ */
+
+.notif-page  { padding: 40px 0; }
+.notif-list  { max-width: 700px; }
+
+/* Single notification row */
+.notif-item {
+    background-color: #ffffff;
+    border: 1px solid #E7E5E0;
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+.notif-item.unread {
+    background-color: #FFFBEB;
+    border-color: #FDE68A;
+}
+.notif-item-icon { font-size: 1.3rem; flex-shrink: 0; padding-top: 2px; }
+.notif-title     { font-size: 0.9rem; font-weight: 700; color: #1C1917; margin-bottom: 3px; }
+.notif-message   { font-size: 0.85rem; color: #57534E; }
+.notif-time      { font-size: 0.78rem; color: #A8A29E; margin-top: 5px; }
