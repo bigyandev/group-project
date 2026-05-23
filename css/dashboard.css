@@ -1,0 +1,119 @@
+/* ============================================================
+   dashboard.css — My Books & Requests pages
+   ============================================================ */
+
+.dashboard-page { padding: 40px 0; }
+
+/* ── Tab navigation ──────────────────────────────────────── */
+.tab-bar {
+    display: flex;
+    border-bottom: 2px solid #E7E5E0;
+    margin-bottom: 32px;
+    gap: 0;
+}
+.tab-btn {
+    padding: 12px 24px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #78716C;
+    cursor: pointer;
+    font-family: inherit;
+}
+.tab-btn:hover  { color: #1C1917; }
+.tab-btn.active { color: #1C1917; border-bottom-color: #F59E0B; }
+.tab-panel      { display: none; }
+.tab-panel.active { display: block; }
+
+/* ── Page top row ────────────────────────────────────────── */
+.dash-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.dash-head h1 { font-size: 1.6rem; font-weight: 800; color: #1C1917; }
+
+/* ── Book listing row ────────────────────────────────────── */
+.listing-row {
+    background-color: #ffffff;
+    border: 1px solid #E7E5E0;
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.listing-row:hover { box-shadow: 0 4px 16px rgba(0,0,0,.07); }
+
+.listing-thumb {
+    width: 56px;
+    height: 76px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #F7F6F2;
+    flex-shrink: 0;
+}
+.listing-thumb-empty {
+    width: 56px;
+    height: 76px;
+    border-radius: 8px;
+    background-color: #F7F6F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #A8A29E;
+    flex-shrink: 0;
+}
+.listing-title  { font-size: 0.95rem; font-weight: 700; color: #1C1917; margin-bottom: 3px; }
+.listing-author { font-size: 0.83rem; color: #78716C; margin-bottom: 6px; }
+.listing-meta   { font-size: 0.8rem; color: #A8A29E; }
+
+.listing-btns {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* ── Request card ────────────────────────────────────────── */
+.request-card {
+    background-color: #ffffff;
+    border: 1px solid #E7E5E0;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 14px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: start;
+}
+.request-book   { font-size: 0.95rem; font-weight: 700; color: #1C1917; margin-bottom: 3px; }
+.request-who    { font-size: 0.85rem; color: #78716C; margin-bottom: 6px; }
+.request-msg {
+    font-size: 0.85rem;
+    color: #44403C;
+    background-color: #F7F6F2;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border-left: 3px solid #F59E0B;
+    margin-top: 10px;
+}
+.request-time   { font-size: 0.78rem; color: #A8A29E; }
+.request-btns   { display: flex; flex-direction: column; gap: 8px; min-width: 110px; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .listing-row    { grid-template-columns: 1fr; gap: 10px; }
+    .listing-btns   { justify-content: flex-start; }
+    .request-card   { grid-template-columns: 1fr; }
+    .request-btns   { flex-direction: row; flex-wrap: wrap; }
+}
