@@ -1,0 +1,63 @@
+/* ============================================================
+   auth.css — Login & Register pages
+   ============================================================ */
+
+/* Full-page centred wrapper */
+.auth-page {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #F7F6F2;
+}
+
+/* White card */
+.auth-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #E7E5E0;
+    padding: 48px 44px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 4px 24px rgba(0,0,0,.06);
+}
+
+/* Logo / icon at top */
+.auth-icon { font-size: 2.8rem; text-align: center; margin-bottom: 16px; }
+
+.auth-card h1 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #1C1917;
+    text-align: center;
+    margin-bottom: 6px;
+}
+.auth-card .auth-sub {
+    text-align: center;
+    color: #78716C;
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+}
+
+/* Link below card */
+.auth-switch {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 0.88rem;
+    color: #78716C;
+}
+.auth-switch a { color: #D97706; font-weight: 600; }
+.auth-switch a:hover { color: #B45309; }
+
+/* Divider line between fields */
+.auth-divider {
+    border: none;
+    border-top: 1px solid #E7E5E0;
+    margin: 24px 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 540px) {
+    .auth-card { padding: 32px 24px; }
+}
