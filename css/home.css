@@ -1,0 +1,216 @@
+/* ============================================================
+   home.css — Homepage (index.php)
+   ============================================================ */
+
+/* ── Hero Slideshow ──────────────────────────────────────── */
+.slideshow {
+    position: relative;
+    height: 580px;
+    overflow: hidden;
+    background-color: #1C1917;
+}
+
+/* Each slide sits stacked; only .active is visible */
+.slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+}
+.slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Background image with dark overlay */
+.slide-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.35);
+    transition: transform 9s ease;
+}
+.slide.active .slide-bg { transform: scale(1.06); }
+
+/* Text content */
+.slide-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.slide-tag {
+    display: inline-block;
+    background-color: #F59E0B;
+    color: #1C1917;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+.slide-title {
+    font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-bottom: 14px;
+    max-width: 620px;
+}
+.slide-text {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,.78);
+    max-width: 480px;
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+.slide-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* Dot indicators */
+.slide-dots {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255,255,255,.35);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.dot.active {
+    background-color: #F59E0B;
+    transform: scale(1.4);
+}
+
+/* Arrow buttons */
+.slide-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.12);
+    border: 2px solid rgba(255,255,255,.25);
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide-arrow:hover { background-color: rgba(255,255,255,.25); }
+.slide-arrow.prev  { left: 20px; }
+.slide-arrow.next  { right: 20px; }
+
+/* ── Stats strip ─────────────────────────────────────────── */
+.stats-strip {
+    background-color: #1C1917;
+    color: #ffffff;
+    padding: 28px 0;
+}
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 20px;
+}
+.stat-num   { font-size: 2rem; font-weight: 800; color: #F59E0B; line-height: 1; }
+.stat-label { font-size: 0.82rem; color: rgba(255,255,255,.55); margin-top: 4px; }
+
+/* ── Section layout ──────────────────────────────────────── */
+.section       { padding: 64px 0; }
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #1C1917;
+    margin-bottom: 6px;
+}
+.section-sub  { color: #78716C; margin-bottom: 36px; }
+.section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* ── Genre pills ─────────────────────────────────────────── */
+.genre-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 36px;
+}
+.genre-pill {
+    padding: 7px 18px;
+    border-radius: 24px;
+    border: 2px solid #E7E5E0;
+    background-color: #ffffff;
+    color: #1C1917;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+.genre-pill:hover,
+.genre-pill.active {
+    background-color: #F59E0B;
+    border-color: #F59E0B;
+    color: #1C1917;
+}
+
+/* ── How it works ────────────────────────────────────────── */
+.steps-wrap  { background-color: #1C1917; }
+.steps-grid  { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.step-card   { text-align: center; color: rgba(255,255,255,.8); }
+.step-num {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #F59E0B;
+    color: #1C1917;
+    font-weight: 800;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+.step-icon   { font-size: 2rem; margin-bottom: 10px; }
+.step-card h3 { font-size: 1.1rem; font-weight: 700; color: #ffffff; margin-bottom: 8px; }
+.step-card p  { font-size: 0.9rem; line-height: 1.7; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .stats-row  { grid-template-columns: repeat(2, 1fr); }
+    .steps-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+    .slideshow   { height: 460px; }
+    .slide-title { font-size: 1.8rem; }
+    .steps-grid  { grid-template-columns: 1fr; gap: 28px; }
+    .stats-row   { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+    .slideshow       { height: 380px; }
+    .slide-arrow     { display: none; }
+}
