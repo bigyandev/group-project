@@ -1,0 +1,120 @@
+/* ============================================================
+   book.css — Book Detail page (book.php)
+   ============================================================ */
+
+/* ── Two-column layout ───────────────────────────────────── */
+.book-detail {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 48px;
+    align-items: start;
+    padding: 48px 0;
+}
+
+/* Cover stays fixed while scrolling */
+.book-detail-cover {
+    position: sticky;
+    top: 88px;
+}
+.book-detail-cover img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 16px 48px rgba(0,0,0,.18);
+}
+.cover-placeholder-lg {
+    width: 100%;
+    aspect-ratio: 2/3;
+    border-radius: 16px;
+    background-color: #E7E5E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: #A8A29E;
+}
+
+/* ── Book info panel ─────────────────────────────────────── */
+.book-detail-info {}
+
+.book-detail-genre {
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #D97706;
+    margin-bottom: 10px;
+}
+.book-detail-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #1C1917;
+    line-height: 1.15;
+    margin-bottom: 8px;
+}
+.book-detail-author { font-size: 1.1rem; color: #57534E; margin-bottom: 20px; }
+
+/* Meta row: condition, listed date etc. */
+.book-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+.book-meta-item { font-size: 0.85rem; color: #57534E; }
+.book-meta-item strong { color: #1C1917; }
+
+/* Description */
+.book-description {
+    color: #44403C;
+    line-height: 1.8;
+    margin-bottom: 32px;
+    white-space: pre-line;
+}
+
+/* ── Owner card ──────────────────────────────────────────── */
+.owner-card {
+    background-color: #F7F6F2;
+    border: 1px solid #E7E5E0;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+.owner-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #A8A29E;
+    margin-bottom: 10px;
+}
+.owner-name  { font-size: 1rem; font-weight: 700; color: #1C1917; margin-bottom: 4px; }
+.owner-meta  { font-size: 0.85rem; color: #78716C; }
+.owner-stars { color: #F59E0B; font-size: 1rem; letter-spacing: 1px; }
+
+/* ── Request form ────────────────────────────────────────── */
+.request-box {
+    background-color: #ffffff;
+    border: 2px solid #E7E5E0;
+    border-radius: 14px;
+    padding: 24px;
+}
+.request-box h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1C1917;
+    margin-bottom: 16px;
+}
+
+/* ── Similar books ───────────────────────────────────────── */
+.similar-section { padding: 48px 0; border-top: 1px solid #E7E5E0; }
+.similar-section h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .book-detail { grid-template-columns: 240px 1fr; gap: 32px; }
+}
+@media (max-width: 768px) {
+    .book-detail { grid-template-columns: 1fr; gap: 24px; }
+    .book-detail-cover { position: static; }
+    .book-detail-title { font-size: 1.6rem; }
+}
